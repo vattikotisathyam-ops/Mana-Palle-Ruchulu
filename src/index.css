@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;800&family=Hind+Guntur:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Libre Baskerville", serif;
+  --font-telugu: "Hind Guntur", sans-serif;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+
+  --color-earth-900: #3E2723;
+  --color-earth-800: #5D4037;
+  --color-leaf-600: #4CAF50;
+  --color-leaf-500: #66BB6A;
+  --color-spice-red: #D32F2F;
+  --color-turmeric: #FFC107;
+  --color-cream: #FAF9F6;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-earth-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-extrabold uppercase tracking-tight leading-none;
+  }
+
+  .telugu {
+    @apply font-telugu;
+  }
+  
+  .serif-italic {
+    @apply font-serif italic;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pill-label {
+  @apply rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest border;
+}
+
+.scroll-mt-header {
+  scroll-margin-top: 5rem;
+}
